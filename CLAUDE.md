@@ -78,6 +78,9 @@ All 6 pages are complete:
 5. **Artigos** (`artigos.html`) — category filters + 6 sample article cards (placeholder content)
 6. **Contato** (`contato.html`) — form, dual-office info with map placeholders, WhatsApp button
 
+### Mobile / Responsive
+All pages are fully responsive with 3 breakpoints (1024px, 768px, 480px). Hamburger menu on mobile. Design panel hidden on mobile. No inline style conflicts remaining.
+
 ### Pending / TBD Content
 - Equipe: remaining team member names, photos, and areas (marked as placeholder cards)
 - Artigos: real article content (currently sample/placeholder titles)

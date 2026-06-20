@@ -100,3 +100,53 @@ Added shared inner-page CSS to `styles.css` (page hero banner, content sections,
 - All 6 pages designed and linked.
 - Awaiting user review for design feedback.
 - TBD: real team member data, real article content, Google Maps embeds, photography.
+
+---
+
+## Session 1 (continued) — 2026-06-20 — Mobile Optimization
+
+### Responsive CSS Added
+
+Added three breakpoint layers to `styles.css`:
+
+#### Tablet (≤1024px)
+- Section padding reduced to 100px/32px
+- Hero goes single-column, h1 to 48px
+- Stats grid: 2×2, numbers to 48px
+- Intro, CTA, page hero layouts: single-column
+- Areas grid: 2 columns
+- Footer: 2-column grid
+- Values: 3 columns, profiles single-column, team/articles: 2 columns
+- Contact layout: single-column
+
+#### Mobile (≤768px)
+- Padding reduced to 72px/20px
+- **Hamburger menu**: 3-bar toggle replaces desktop nav, slides down as full-width dropdown. "Contato" CTA button hidden (available as nav link instead).
+- Hero: h1 30→36px, arch frame hidden, image uses standard radius
+- Stats: 2×2 with right-border on odd items for visual separation
+- All grids collapse to single-column
+- Quote aside: smaller padding, 22px font
+- Inspiration: 26px quote
+- CTA button: full-width
+- Footer: single-column, centered bottom links
+- Design panel: hidden entirely on mobile
+- Contact: full-width form submit, smaller map height
+- Values: 2 columns
+- Team/articles: single-column
+
+#### Small Mobile (≤480px)
+- Top bar stacks vertically
+- Hero h1: 30px, image goes 1:1
+- Stats numbers: 34px
+- Values: single-column
+- Quotes: 20-22px
+- All headings: 28px floor
+
+### HTML Changes (all 6 pages)
+- Added hamburger menu button (`<button class="mobile-menu-toggle">`) before nav in all page headers
+- Added "Contato" link inside mobile nav dropdown (since CTA button hides on mobile)
+- Converted inline `font-size:48px` on `areas-de-atuacao.html` h2 elements to `.section-heading` class (inline styles block media queries)
+
+### Status
+- Mobile optimization complete across all 6 pages.
+- Awaiting user review.
