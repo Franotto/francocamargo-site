@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Marcellus&family=DM+Serif+Display:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Hanken Grotesk', sans-serif; background: #241712; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #5C1A1F; color: #F4ECE2; }
+  a { text-decoration: none; color: inherit; }
+</style>
+</helmet>
+
+<div style="background:#F4ECE2; overflow-x:hidden; --display:{{ displayFont }}; --radius:{{ radiusCss }}; --shadow-card:{{ shadowCard }}; --shadow-card-hover:{{ shadowCardHover }}; --shadow-float:{{ shadowFloat }};">
+
+  <!-- ===================== HERO ===================== -->
+  <section style="background:#241712; color:#F4ECE2; position:relative; overflow:hidden;">
+    <div style="position:absolute; top:-20%; right:-10%; width:780px; height:780px; border-radius:50%; background:radial-gradient(circle, rgba(92,26,31,0.55) 0%, rgba(36,23,18,0) 68%); pointer-events:none;"></div>
+
+    <sc-if value="{{ showTopBar }}" hint-placeholder-val="{{ true }}">
+      <div style="position:relative; z-index:3; border-bottom:1px solid rgba(244,236,226,0.12); display:flex; justify-content:space-between; align-items:center; padding:12px 56px; font-size:13px; letter-spacing:0.08em; color:rgba(244,236,226,0.72);">
+        <span style="text-transform:uppercase;">Trusted counsel since 1986</span>
+        <span style="display:flex; gap:28px; align-items:center;">
+          <span>+1 (212) 408 9200</span>
+          <span style="color:#E5CFC5;">Schedule a consultation</span>
+        </span>
+      </div>
+    </sc-if>
+
+    <header style="position:relative; z-index:3; display:flex; justify-content:space-between; align-items:center; padding:26px 56px;">
+      <div style="font-family:var(--display); font-size:26px; font-weight:600; letter-spacing:0.04em;">HALE <span style="color:#B98A5E;">&amp;</span> WREN</div>
+      <nav style="display:flex; gap:40px; font-size:15px; letter-spacing:0.02em; color:rgba(244,236,226,0.82);">
+        <a href="#" style="transition:color .2s;" style-hover="color:#E5CFC5;">Practice</a>
+        <a href="#" style="transition:color .2s;" style-hover="color:#E5CFC5;">About</a>
+        <a href="#" style="transition:color .2s;" style-hover="color:#E5CFC5;">Attorneys</a>
+        <a href="#" style="transition:color .2s;" style-hover="color:#E5CFC5;">Insights</a>
+      </nav>
+      <a href="#" style="border:1px solid rgba(244,236,226,0.35); padding:11px 22px; border-radius:var(--radius); font-size:14px; letter-spacing:0.04em; transition:all .2s;" style-hover="background:#F4ECE2; color:#241712; border-color:#F4ECE2;">Contact</a>
+    </header>
+
+    <div style="position:relative; z-index:2; max-width:1320px; margin:0 auto; padding:64px 56px 96px; display:grid; grid-template-columns:1.08fr 0.92fr; gap:64px; align-items:center;">
+      <div>
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:30px;">
+          <span style="width:40px; height:1px; background:#B98A5E;"></span>
+          <span style="font-size:13px; letter-spacing:0.22em; text-transform:uppercase; color:#E5CFC5;">Attorneys at Law · New York</span>
+        </div>
+        <h1 style="font-family:var(--display); font-weight:600; font-size:82px; line-height:1.02; letter-spacing:-0.01em; margin-bottom:28px;">Defending what<br>matters, with<br><span style="font-style:italic; color:#E5CFC5;">quiet conviction.</span></h1>
+        <p style="font-size:19px; line-height:1.65; color:rgba(244,236,226,0.72); max-width:480px; margin-bottom:40px;">A boutique firm built on rigor and discretion. We represent founders, families, and institutions through their most consequential moments.</p>
+        <div style="display:flex; gap:16px; align-items:center;">
+          <a href="#" style="background:#5C1A1F; color:#F4ECE2; padding:16px 34px; border-radius:var(--radius); font-size:15px; letter-spacing:0.03em; font-weight:500; transition:all .25s;" style-hover="background:#73232a; transform:translateY(-2px);">Request a consultation</a>
+          <a href="#" style="display:flex; align-items:center; gap:10px; padding:16px 6px; font-size:15px; color:#F4ECE2; border-bottom:1px solid transparent; transition:border-color .2s;" style-hover="border-color:#B98A5E;">Our practice areas <span style="font-size:18px;">→</span></a>
+        </div>
+      </div>
+
+      <div style="position:relative;">
+        <div style="position:absolute; inset:-18px -18px 28px -18px; border:1px solid rgba(185,138,94,0.4); border-radius:300px 300px 14px 14px; z-index:0;"></div>
+        <div style="position:relative; z-index:1; aspect-ratio:4/5; border-radius:{{ heroRadius }}; overflow:hidden; background:repeating-linear-gradient(45deg,#3a261d,#3a261d 11px,#33211a 11px,#33211a 22px); display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:monospace; font-size:13px; color:rgba(244,236,226,0.5); letter-spacing:0.05em;">[ attorney / firm portrait ]</span>
+        </div>
+        <div style="position:absolute; z-index:2; bottom:-26px; left:-30px; background:#E5CFC5; color:#241712; padding:20px 26px; border-radius:var(--radius); box-shadow:var(--shadow-float);">
+          <div style="font-family:var(--display); font-size:38px; font-weight:600; line-height:1;">38<span style="color:#5C1A1F;">+</span></div>
+          <div style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; margin-top:4px; color:#5d4a3f;">Years of practice</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section style="background:#F4ECE2; color:#241712; padding:84px 56px; border-bottom:1px solid rgba(36,23,18,0.08);">
+    <div style="max-width:1320px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:48px;">
+      <div style="text-align:center; padding:0 8px;">
+        <div style="font-family:var(--display); font-size:64px; font-weight:600; line-height:1; color:#5C1A1F;">$2.4B</div>
+        <div style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#6b5b50; margin-top:14px;">Recovered for clients</div>
+      </div>
+      <div style="text-align:center; padding:0 8px; border-left:1px solid rgba(36,23,18,0.1);">
+        <div style="font-family:var(--display); font-size:64px; font-weight:600; line-height:1; color:#5C1A1F;">98<span style="font-size:40px;">%</span></div>
+        <div style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#6b5b50; margin-top:14px;">Favorable outcomes</div>
+      </div>
+      <div style="text-align:center; padding:0 8px; border-left:1px solid rgba(36,23,18,0.1);">
+        <div style="font-family:var(--display); font-size:64px; font-weight:600; line-height:1; color:#5C1A1F;">1,200<span style="font-size:40px;">+</span></div>
+        <div style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#6b5b50; margin-top:14px;">Matters resolved</div>
+      </div>
+      <div style="text-align:center; padding:0 8px; border-left:1px solid rgba(36,23,18,0.1);">
+        <div style="font-family:var(--display); font-size:64px; font-weight:600; line-height:1; color:#5C1A1F;">24</div>
+        <div style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#6b5b50; margin-top:14px;">Partners &amp; counsel</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHO WE ARE ===================== -->
+  <section style="background:#F4ECE2; color:#241712; padding:128px 56px;">
+    <div style="max-width:1320px; margin:0 auto; display:grid; grid-template-columns:1.25fr 1fr; gap:88px; align-items:center;">
+      <div>
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:26px;">
+          <span style="width:40px; height:1px; background:#B98A5E;"></span>
+          <span style="font-size:13px; letter-spacing:0.22em; text-transform:uppercase; color:#9a3b3b;">Who we are</span>
+        </div>
+        <h2 style="font-family:var(--display); font-weight:600; font-size:54px; line-height:1.08; letter-spacing:-0.01em; margin-bottom:30px; max-width:600px;">A small firm with the conviction of a large one.</h2>
+        <p style="font-size:18px; line-height:1.75; color:#5a4b41; max-width:560px; margin-bottom:22px;">Founded in 1986, Hale &amp; Wren was built around a simple belief: that exceptional representation is personal. We keep our roster deliberately lean so that every client works directly with a partner who knows their matter intimately.</p>
+        <p style="font-size:18px; line-height:1.75; color:#5a4b41; max-width:560px; margin-bottom:38px;">From the boardroom to the courtroom, we bring the same discipline — meticulous preparation, candid counsel, and an unwillingness to settle for the expedient.</p>
+        <div style="display:flex; align-items:center; gap:18px;">
+          <div style="font-family:var(--display); font-style:italic; font-size:30px; color:#241712;">Margaret Hale</div>
+          <div style="height:34px; width:1px; background:rgba(36,23,18,0.2);"></div>
+          <div style="font-size:14px; color:#6b5b50; line-height:1.5;">Founding Partner<br>Managing Director</div>
+        </div>
+      </div>
+
+      <aside style="background:#5C1A1F; color:#F4ECE2; border-radius:var(--radius); padding:56px 48px; position:relative; align-self:stretch; box-shadow:var(--shadow-card); display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-family:var(--display); font-size:120px; line-height:0.6; color:rgba(229,207,197,0.35); height:54px;">“</div>
+        <p style="font-family:var(--display); font-style:italic; font-size:32px; line-height:1.4; margin-bottom:34px;">We do not measure ourselves by the cases we take, but by the trust we are asked to keep.</p>
+        <div style="display:flex; align-items:center; gap:14px; padding-top:26px; border-top:1px solid rgba(244,236,226,0.18);">
+          <div style="width:46px; height:46px; border-radius:50%; background:repeating-linear-gradient(45deg,#73232a,#73232a 6px,#6a2027 6px,#6a2027 12px);"></div>
+          <div>
+            <div style="font-size:16px; font-weight:600;">Daniel Wren</div>
+            <div style="font-size:13px; color:#E5CFC5;">Senior Partner, Litigation</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section style="background:#EFE4D7; color:#241712; padding:128px 56px;">
+    <div style="max-width:1320px; margin:0 auto;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:64px; flex-wrap:wrap; gap:24px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:22px;">
+            <span style="width:40px; height:1px; background:#B98A5E;"></span>
+            <span style="font-size:13px; letter-spacing:0.22em; text-transform:uppercase; color:#9a3b3b;">Practice areas</span>
+          </div>
+          <h2 style="font-family:var(--display); font-weight:600; font-size:54px; line-height:1.05; letter-spacing:-0.01em; max-width:560px;">Counsel across the matters that define a life and a business.</h2>
+        </div>
+        <a href="#" style="display:flex; align-items:center; gap:10px; font-size:15px; color:#5C1A1F; border-bottom:1px solid rgba(92,26,31,0.4); padding-bottom:6px; transition:gap .2s;" style-hover="gap:16px;">View all services <span style="font-size:18px;">→</span></a>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:24px;">
+        <div style="background:#F7F1E8; border:1px solid rgba(36,23,18,0.08); border-radius:var(--radius); padding:40px 32px; display:flex; flex-direction:column; min-height:340px; box-shadow:var(--shadow-card); transition:all .3s;" style-hover="transform:translateY(-6px); box-shadow:var(--shadow-card-hover); border-color:rgba(92,26,31,0.25);">
+          <div style="font-family:var(--display); font-size:22px; color:#B98A5E;">01</div>
+          <h3 style="font-family:var(--display); font-weight:600; font-size:30px; line-height:1.15; margin:auto 0 16px;">Corporate &amp;<br>Commercial</h3>
+          <p style="font-size:15px; line-height:1.65; color:#6b5b50; margin-bottom:24px;">Formation, financing, M&amp;A, and the day-to-day counsel that keeps companies moving.</p>
+          <a href="#" style="font-size:14px; color:#5C1A1F; letter-spacing:0.03em;">Learn more →</a>
+        </div>
+        <div style="background:#F7F1E8; border:1px solid rgba(36,23,18,0.08); border-radius:var(--radius); padding:40px 32px; display:flex; flex-direction:column; min-height:340px; box-shadow:var(--shadow-card); transition:all .3s;" style-hover="transform:translateY(-6px); box-shadow:var(--shadow-card-hover); border-color:rgba(92,26,31,0.25);">
+          <div style="font-family:var(--display); font-size:22px; color:#B98A5E;">02</div>
+          <h3 style="font-family:var(--display); font-weight:600; font-size:30px; line-height:1.15; margin:auto 0 16px;">Litigation &amp;<br>Disputes</h3>
+          <p style="font-size:15px; line-height:1.65; color:#6b5b50; margin-bottom:24px;">Trial-tested advocacy in commercial, regulatory, and high-stakes civil matters.</p>
+          <a href="#" style="font-size:14px; color:#5C1A1F; letter-spacing:0.03em;">Learn more →</a>
+        </div>
+        <div style="background:#F7F1E8; border:1px solid rgba(36,23,18,0.08); border-radius:var(--radius); padding:40px 32px; display:flex; flex-direction:column; min-height:340px; box-shadow:var(--shadow-card); transition:all .3s;" style-hover="transform:translateY(-6px); box-shadow:var(--shadow-card-hover); border-color:rgba(92,26,31,0.25);">
+          <div style="font-family:var(--display); font-size:22px; color:#B98A5E;">03</div>
+          <h3 style="font-family:var(--display); font-weight:600; font-size:30px; line-height:1.15; margin:auto 0 16px;">Private Client<br>&amp; Estates</h3>
+          <p style="font-size:15px; line-height:1.65; color:#6b5b50; margin-bottom:24px;">Wealth structuring, succession, and trusts handled with discretion and care.</p>
+          <a href="#" style="font-size:14px; color:#5C1A1F; letter-spacing:0.03em;">Learn more →</a>
+        </div>
+        <div style="background:#5C1A1F; color:#F4ECE2; border:1px solid #5C1A1F; border-radius:var(--radius); padding:40px 32px; display:flex; flex-direction:column; min-height:340px; box-shadow:var(--shadow-card); transition:all .3s;" style-hover="transform:translateY(-6px); box-shadow:var(--shadow-card-hover);">
+          <div style="font-family:var(--display); font-size:22px; color:#E5CFC5;">04</div>
+          <h3 style="font-family:var(--display); font-weight:600; font-size:30px; line-height:1.15; margin:auto 0 16px;">Real Estate<br>&amp; Property</h3>
+          <p style="font-size:15px; line-height:1.65; color:rgba(244,236,226,0.78); margin-bottom:24px;">Acquisitions, development, leasing, and land use from contract to close.</p>
+          <a href="#" style="font-size:14px; color:#E5CFC5; letter-spacing:0.03em;">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INSPIRATIONAL QUOTE ===================== -->
+  <section style="background:#241712; color:#F4ECE2; position:relative; overflow:hidden; padding:150px 56px;">
+    <div style="position:absolute; inset:0; background:repeating-linear-gradient(45deg,#2a1b14,#2a1b14 13px,#261810 13px,#261810 26px); opacity:0.55;"></div>
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:680px; height:680px; border-radius:50%; background:radial-gradient(circle, rgba(92,26,31,0.6) 0%, rgba(36,23,18,0) 70%);"></div>
+    <div style="position:relative; z-index:2; max-width:1000px; margin:0 auto; text-align:center;">
+      <span style="font-size:13px; letter-spacing:0.24em; text-transform:uppercase; color:#B98A5E;">Our philosophy</span>
+      <blockquote style="font-family:var(--display); font-weight:500; font-size:56px; line-height:1.28; letter-spacing:-0.005em; margin:36px 0 40px;">“The law is reason, free from passion — but its practice demands <span style="font-style:italic; color:#E5CFC5;">conviction, patience, and the courage</span> to stand where others would not.”</blockquote>
+      <div style="display:flex; align-items:center; justify-content:center; gap:14px;">
+        <span style="width:34px; height:1px; background:rgba(244,236,226,0.4);"></span>
+        <span style="font-size:15px; letter-spacing:0.06em; color:rgba(244,236,226,0.8);">A principle we have practiced for four decades</span>
+        <span style="width:34px; height:1px; background:rgba(244,236,226,0.4);"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA + FOOTER ===================== -->
+  <section style="background:#EFE4D7; color:#241712; padding:110px 56px;">
+    <div style="max-width:1320px; margin:0 auto; display:grid; grid-template-columns:1fr auto; gap:48px; align-items:center;">
+      <div>
+        <h2 style="font-family:var(--display); font-weight:600; font-size:52px; line-height:1.08; max-width:640px;">Let's discuss what's at stake for you.</h2>
+        <p style="font-size:18px; color:#5a4b41; margin-top:18px; max-width:520px;">Every engagement begins with a confidential conversation. There is no obligation — only clarity.</p>
+      </div>
+      <a href="#" style="background:#5C1A1F; color:#F4ECE2; padding:20px 44px; border-radius:var(--radius); font-size:16px; letter-spacing:0.03em; font-weight:500; white-space:nowrap; transition:all .25s;" style-hover="background:#73232a; transform:translateY(-2px);">Book a consultation →</a>
+    </div>
+  </section>
+
+  <footer style="background:#241712; color:rgba(244,236,226,0.72); padding:80px 56px 40px;">
+    <div style="max-width:1320px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:48px; padding-bottom:56px; border-bottom:1px solid rgba(244,236,226,0.12);">
+      <div>
+        <div style="font-family:var(--display); font-size:26px; font-weight:600; color:#F4ECE2; margin-bottom:18px;">HALE <span style="color:#B98A5E;">&amp;</span> WREN</div>
+        <p style="font-size:15px; line-height:1.7; max-width:300px;">A boutique law firm representing founders, families, and institutions through their most consequential moments.</p>
+      </div>
+      <div>
+        <div style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#E5CFC5; margin-bottom:18px;">Practice</div>
+        <div style="display:flex; flex-direction:column; gap:12px; font-size:15px;">
+          <a href="#" style="transition:color .2s;" style-hover="color:#F4ECE2;">Corporate</a>
+          <a href="#" style="transition:color .2s;" style-hover="color:#F4ECE2;">Litigation</a>
+          <a href="#" style="transition:color .2s;" style-hover="color:#F4ECE2;">Private Client</a>
+          <a href="#" style="transition:color .2s;" style-hover="color:#F4ECE2;">Real Estate</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#E5CFC5; margin-bottom:18px;">Firm</div>
+        <div style="display:flex; flex-direction:column; gap:12px; font-size:15px;">
+          <a href="#" style="transition:color .2s;" style-hover="color:#F4ECE2;">About</a>
+          <a href="#" style="transition:color .2s;" style-hover="color:#F4ECE2;">Attorneys</a>
+          <a href="#" style="transition:color .2s;" style-hover="color:#F4ECE2;">Insights</a>
+          <a href="#" style="transition:color .2s;" style-hover="color:#F4ECE2;">Careers</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#E5CFC5; margin-bottom:18px;">Contact</div>
+        <div style="display:flex; flex-direction:column; gap:12px; font-size:15px;">
+          <span>410 Park Avenue, 18th Floor<br>New York, NY 10022</span>
+          <span>+1 (212) 408 9200</span>
+          <span>counsel@halewren.com</span>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1320px; margin:0 auto; padding-top:28px; display:flex; justify-content:space-between; font-size:13px; color:rgba(244,236,226,0.5); flex-wrap:wrap; gap:12px;">
+      <span>© 2026 Hale &amp; Wren LLP. All rights reserved.</span>
+      <span style="display:flex; gap:24px;"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Attorney Advertising</a></span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showTopBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;heroMediaShape&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Arch&quot;,&quot;Rectangle&quot;,&quot;Rounded&quot;],&quot;default&quot;:&quot;Arch&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;headingFont&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Cormorant&quot;,&quot;Playfair&quot;,&quot;Marcellus&quot;,&quot;DM Serif&quot;,&quot;Hanken Sans&quot;],&quot;default&quot;:&quot;Hanken Sans&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;cornerRadius&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:16,&quot;min&quot;:0,&quot;max&quot;:48,&quot;step&quot;:1,&quot;tsType&quot;:&quot;number&quot;},&quot;shadowDepth&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;None&quot;,&quot;Soft&quot;,&quot;Medium&quot;,&quot;Strong&quot;],&quot;default&quot;:&quot;Soft&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const shape = this.props.heroMediaShape || 'Arch';
+    const heroRadius = shape === 'Arch' ? '300px 300px 14px 14px'
+      : shape === 'Rounded' ? '24px' : '4px';
+
+    const fonts = {
+      'Cormorant': "'Cormorant Garamond', serif",
+      'Playfair': "'Playfair Display', serif",
+      'Marcellus': "'Marcellus', serif",
+      'DM Serif': "'DM Serif Display', serif",
+      'Hanken Sans': "'Hanken Grotesk', sans-serif",
+    };
+    const displayFont = fonts[this.props.headingFont] || fonts['Cormorant'];
+
+    const r = this.props.cornerRadius ?? 4;
+
+    const shadows = {
+      None:   { card: 'none', hover: 'none', float: 'none' },
+      Soft:   { card: '0 6px 16px rgba(36,23,18,0.06)',  hover: '0 16px 34px rgba(92,26,31,0.10)', float: '0 12px 30px rgba(0,0,0,0.22)' },
+      Medium: { card: '0 12px 28px rgba(36,23,18,0.10)', hover: '0 24px 50px rgba(92,26,31,0.16)', float: '0 20px 50px rgba(0,0,0,0.32)' },
+      Strong: { card: '0 20px 44px rgba(36,23,18,0.16)', hover: '0 34px 70px rgba(92,26,31,0.24)', float: '0 30px 66px rgba(0,0,0,0.42)' },
+    };
+    const s = shadows[this.props.shadowDepth] || shadows['Soft'];
+
+    return {
+      showTopBar: this.props.showTopBar ?? true,
+      heroRadius,
+      displayFont,
+      radiusCss: r + 'px',
+      shadowCard: s.card,
+      shadowCardHover: s.hover,
+      shadowFloat: s.float,
+    };
+  }
+}
+</script>
+</body>
+</html>
