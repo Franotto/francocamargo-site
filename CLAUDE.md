@@ -88,6 +88,11 @@ All pages are fully responsive with 3 breakpoints (1024px, 768px, 480px). Hambur
 - All pages: real photography (office, team portraits)
 - Privacy policy and terms pages (linked in footer as TBD)
 
+### Deployment
+- Repo: `Franotto/francocamargo-site` (public)
+- GitHub Pages: **https://franotto.github.io/francocamargo-site/**
+- Deploy mode: legacy (serves static files from `main` branch root)
+
 ## Design Iteration Log
 
 See `docs/designlog.md` for a chronological record of all design decisions and changes.
