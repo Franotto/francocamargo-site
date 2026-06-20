@@ -8,7 +8,12 @@ Design-only project for a Brazilian law firm website (Franco Camargo Advocacia e
 
 ```
 francocamargo-site/
-├── index.html              # Homepage (current focus)
+├── index.html              # Homepage
+├── quem-somos.html         # About page
+├── areas-de-atuacao.html   # Practice areas (PJ + PF sections)
+├── equipe.html             # Team / attorney profiles
+├── artigos.html            # Articles / blog listing
+├── contato.html            # Contact form + office info
 ├── styles.css              # Shared design system + component styles
 ├── assets/
 │   └── office.avif         # Hero office photo
@@ -63,14 +68,22 @@ francocamargo-site/
 ### Design Panel
 The page includes an interactive side panel (gear icon, right edge) for live tweaking: fonts, colors, radius, spacing, shadows, section visibility. Has **Copy Parameters** / **Apply Pasted** buttons for sharing state as JSON between browser and Claude sessions.
 
-## Pages Yet To Design
+## Pages — All Designed
 
-From `FC Advocia.md`:
-1. **Quem Somos** — full about page (philosophy, values, institutional closing)
-2. **Áreas de Atuação** — dedicated page with expanded PJ/PF areas
-3. **Equipe** — attorney profiles (Solange + TBD team members)
-4. **Artigos** — blog/articles listing with filters
-5. **Contato** — form, dual-office addresses, maps, WhatsApp
+All 6 pages are complete:
+1. **Home** (`index.html`) — hero, stats, quem somos intro, áreas tabs, quote, CTA, footer
+2. **Quem Somos** (`quem-somos.html`) — office presentation, philosophy, values grid, CTA
+3. **Áreas de Atuação** (`areas-de-atuacao.html`) — separate PJ and PF sections with full card grids
+4. **Equipe** (`equipe.html`) — featured profile (Solange) with full credentials + placeholder team grid
+5. **Artigos** (`artigos.html`) — category filters + 6 sample article cards (placeholder content)
+6. **Contato** (`contato.html`) — form, dual-office info with map placeholders, WhatsApp button
+
+### Pending / TBD Content
+- Equipe: remaining team member names, photos, and areas (marked as placeholder cards)
+- Artigos: real article content (currently sample/placeholder titles)
+- Contato: Google Maps embeds (currently placeholder boxes)
+- All pages: real photography (office, team portraits)
+- Privacy policy and terms pages (linked in footer as TBD)
 
 ## Design Iteration Log
 

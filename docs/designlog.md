@@ -42,8 +42,61 @@ Chronological record of design decisions and iterations. Referenced from `CLAUDE
 - Removed hero badge (founding year) since that info moved to stats.
 - Homepage sections finalized in order: top bar → header → hero → stats → quem somos intro → áreas de atuação (PJ/PF tabs) → inspirational quote → CTA → footer.
 
-### Status at End of Session
+### Status at End of Session 1
 
 - Homepage design is in a good state.
 - 5 inner pages remain: Quem Somos, Áreas de Atuação, Equipe, Artigos, Contato.
 - Project is now git-tracked.
+
+---
+
+## Session 1 (continued) — 2026-06-20
+
+### All Inner Pages Designed
+
+Added shared inner-page CSS to `styles.css` (page hero banner, content sections, two-column layouts, values grid, profile cards, team grid, article cards, contact form, map placeholders, WhatsApp button).
+
+#### Quem Somos (`quem-somos.html`)
+- Page hero with breadcrumb, title, subtitle
+- Two-column layout: office presentation text + philosophy quote aside
+- Centered philosophy section on alt background
+- 5-column values grid (Ética, Cidadania, Confiança, Pessoalidade, Responsabilidade) with icon circles using first letter
+- Discrete CTA closing
+
+#### Áreas de Atuação (`areas-de-atuacao.html`)
+- Intro paragraph about strategic partnership
+- Separate PJ and PF sections (no tabs — each gets its own full section with heading)
+- PJ: 9 area cards in 3-column grid, last card (Projetos Sociais) in accent style
+- PF: 7 area cards, last card (Previdenciário) in accent style
+- CTA: "Não encontrou exatamente o que procura?"
+
+#### Equipe (`equipe.html`)
+- Featured profile: Solange Pereira Franco de Camargo with full credentials and courses from content doc
+- Photo placeholder (aspect-ratio 3:4)
+- Two credential sections: Formação e Credenciais + Cursos Extracurriculares with styled bullet lists
+- 3-card placeholder grid for additional team members (TBD content)
+- No CTA per content doc guidance (trust-building page)
+
+#### Artigos (`artigos.html`)
+- Category filter buttons (Todos, Tributário, Trabalhista, Civil, Família, Consumidor, Previdenciário)
+- 6 sample article cards in 3-column grid, each with:
+  - Image placeholder
+  - Category tag + date
+  - Title, summary, "Ler mais" link
+- Sample titles are topically relevant to FC's practice areas (not real articles)
+
+#### Contato (`contato.html`)
+- Full contact form: nome, email, telefone, assunto (dropdown with all 15 practice areas + Outro), mensagem, submit button
+- Dual-office info blocks (São Paulo Santana + Taubaté) with addresses, phones, map placeholders
+- Email + social media links (Instagram, Facebook)
+- WhatsApp button with SVG icon, links to wa.me/5511910391001
+
+### Cross-Page Updates
+- Updated all navigation links across all pages (header nav + footer) to point to actual HTML files
+- Updated index.html header and footer links from `#` to real page filenames
+- Consistent header/footer/top-bar across all pages
+
+### Status
+- All 6 pages designed and linked.
+- Awaiting user review for design feedback.
+- TBD: real team member data, real article content, Google Maps embeds, photography.
